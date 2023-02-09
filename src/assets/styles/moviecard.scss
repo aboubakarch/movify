@@ -1,0 +1,79 @@
+@import "./colors.scss";
+
+.container-card {
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 2px 5px 0px #48474c;
+  }
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+  width: 100%;
+  padding: 5px;
+  .card__media {
+    position: relative;
+    width: 100%;
+    height: 310px;
+    border-radius: 10px;
+    overflow: hidden;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #00000032;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .media__rating {
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 10;
+      top: 20px;
+      left: 20px;
+      border: 1px solid $secondary;
+      p {
+        font-family: Nunito;
+        color: $white;
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+  }
+  .card__content {
+    width: 100%;
+    margin-top: 10px;
+    .content__title {
+      width: 100%;
+      h2 {
+        margin: 0px;
+        font-family: Nunito;
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $white;
+        white-space: nowrap;
+      }
+    }
+    .content__meta {
+      width: 100%;
+      p {
+        margin: 0px;
+        font-family: Nunito;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $secondary;
+        white-space: nowrap;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

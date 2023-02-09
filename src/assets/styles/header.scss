@@ -1,0 +1,55 @@
+@import "./colors.scss";
+
+.top-bar {
+  justify-content: center;
+  display: flex;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $primary;
+  z-index: 101;
+  border-bottom: 1px solid $primary-light;
+  color: $white;
+
+  .top-bar__container {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    .container__logo {
+      width: 30%;
+      h3 {
+        text-transform: uppercase;
+        font-family: Nunito;
+        font-weight: 800;
+        font-size: 24px;
+        span {
+          color: $light;
+          &:first-of-type {
+            color: $secondary;
+          }
+        }
+      }
+    }
+    .container__menu {
+      display: flex;
+
+      width: 70%;
+      .menu__item {
+        padding: 0px 20px;
+        font-family: Comfortaa;
+        font-weight: 600;
+        color: inherit;
+        margin-left: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        &:hover {
+          color: $secondary;
+          border: $secondary 1px solid;
+        }
+      }
+    }
+  }
+}

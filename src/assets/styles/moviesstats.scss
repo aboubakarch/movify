@@ -1,0 +1,42 @@
+@import "./colors.scss";
+
+.stats-container {
+  position: relative;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background: $primary-light;
+  .container__fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    svg {
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+      width: 80%;
+    }
+    height: 100%;
+    width: 80%;
+    margin-top: 40px;
+    position: relative;
+    .container__fluid__title-sec {
+      margin-bottom: 40px;
+      width: 100%;
+      h3 {
+        font-family: Nunito;
+        font-weight: 700px;
+        @media screen and (max-width: 1069px) {
+          font-size: 20px;
+        }
+        font-size: 30px;
+        color: $secondary;
+        span {
+          color: $white;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

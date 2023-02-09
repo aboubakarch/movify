@@ -1,0 +1,112 @@
+@import "./colors.scss";
+
+.bg-image {
+  background: url("../images/home__bg.jpeg") no-repeat !important;
+  height: 600px !important;
+}
+
+.home-container {
+  position: relative;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background: $primary-light;
+  .container__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000000b6;
+  }
+  .container__fluid {
+    width: 80%;
+    margin-top: 40px;
+    position: relative;
+    .container__fluid__title-sec {
+      display: flex;
+      margin-bottom: 40px;
+      justify-content: space-between;
+      .title-sec__hide {
+        @media screen and (max-width: 1009px) {
+          display: none;
+        }
+      }
+      h3 {
+        font-family: Comfortaa;
+        font-weight: 700px;
+        @media screen and (max-width: 1069px) {
+          font-size: 16px;
+        }
+        font-size: 24px;
+        color: $white;
+        span {
+          font-weight: 300;
+        }
+      }
+      .title-sec--sort {
+        align-items: center;
+        @media screen and (max-width: 799px) {
+          flex-wrap: wrap;
+          width: 100%;
+          gap: 10px;
+          justify-content: space-between;
+        }
+        p {
+          @media screen and (max-width: 849px) {
+            display: none;
+          }
+          font-family: Nunito;
+          font-size: 16px;
+          font-weight: 600;
+          color: $white;
+          margin-left: 10px;
+        }
+        select {
+          @media screen and (max-width: 799px) {
+            width: 47%;
+            margin-left: 0px;
+          }
+          width: 200px;
+          height: 40px;
+          border-radius: 6px;
+          padding: 0px 5px;
+          border: 1px solid $secondary;
+          outline: none;
+          margin-left: 10px;
+        }
+        input {
+          @media screen and (max-width: 799px) {
+            width: 100%;
+            margin-left: 0px;
+            margin-bottom: 10px;
+          }
+          width: 200px;
+          height: 25px;
+          border-radius: 6px;
+          padding: 5px;
+          border: 1px solid $secondary;
+          outline: none;
+          margin-left: 10px;
+        }
+      }
+    }
+    .container__fluid__list {
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+      flex-wrap: wrap;
+      .list__item {
+        width: 20%;
+        @media screen and (max-width: 1069px) {
+          width: 30%;
+        }
+        @media screen and (max-width: 849px) {
+          width: 47%;
+        }
+        @media screen and (max-width: 499px) {
+          width: 100%;
+        }
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
